@@ -50,14 +50,26 @@ export default {
           rose: '#f43f5e',
         }      
       },
-      fontFamily: {
+      extend: {
+        colors: {
+          pastel: {
+            yellow: '#FFF9C4',
+            blue: '#BBDEFB',
+            green: '#C8E6C9',
+            pink: '#F8BBD0',
+            purple: '#E1BEE7',
+            orange: '#FFE0B2'
+          }
+        },
+        fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         heading: ['Inter', 'ui-sans-serif', 'system-ui']
       },
       boxShadow: {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
-        'neu-light': '5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff',
+        'sticky': '0 5px 15px rgba(0, 0, 0, 0.08)',
+        'neu-light': '5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff', 
         'neu-dark': '5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.05)'
       },
       borderRadius: {
