@@ -470,9 +470,9 @@ function MainFeature() {
       <div className="calendar-container card">
         {/* Day Headers */}
         <div className="calendar-header">
-          <div className="time-gutter">
-            <div className="time-header text-surface-500 dark:text-surface-400">
-              Time
+          <div className="time-header text-surface-500 dark:text-surface-400">
+            <div className="font-medium text-center">
+              Time/Day
             </div>
           </div>
           
@@ -503,19 +503,19 @@ function MainFeature() {
                       <motion.div
                         key={task.id}
                         className={`sticky-note ${task.color} ${task.completed ? 'completed' : ''}`}
-                        initial={{ opacity: 0, y: 20, rotate: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ 
                           opacity: 1, 
                           y: 0, 
-                          rotate: Math.random() * 6 - 3,
+                          rotate: Math.random() * 4 - 2, // Slight random rotation for sticky note effect
                           transition: { type: "spring", stiffness: 300, damping: 25 }
                         }}
-                        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.2 } }}
+                        exit={{ opacity: 0, y: 20, scale: 0.8, transition: { duration: 0.2 } }}
                         whileHover={{ 
                           scale: 1.03, 
                           rotate: 0,
                           zIndex: 10,
-                          boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                          boxShadow: "0 10px 20px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -5px rgba(0, 0, 0, 0.1)"
                         }}
                         drag
                         onDragStart={() => setIsDragging(true)}
